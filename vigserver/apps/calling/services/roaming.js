@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const ServiceBase=require("core/service/servicebase"),async=require("async");class WirelessRoamingService extends ServiceBase{constructor(e){super(e),this.messageQueue=new Queue}onStart(){}onStop(){}onMessage(e){}}module.exports=WirelessRoamingService;

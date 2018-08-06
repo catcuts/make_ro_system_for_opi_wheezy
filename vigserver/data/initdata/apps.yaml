@@ -1,0 +1,21 @@
+records:
+  #信息发布
+  - name: player
+    title: Multimedia Message Player
+    enabled: true
+    author: 环宇通
+    version: 1.0
+    # 是否暴露API接口
+    api: true
+    #是否提供静态资源访问
+    static: true
+    #Web访问界面
+    web: true
+    # 声明要在事件总线上订阅的专题消息，如service.serialport.data
+    # 多个专题消息可以使用逗号，分开，如service.serialport.data,service.serialport.notify
+    # 每个模块均可能发现自己的主题消息
+    subscribe:
+  #无线呼叫应用
+  - name: calling
+    title: Wireless Calling system
+    enabled: true

@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+let express=require("express"),passport=require("passport"),router=express.Router();router.get("/",function(e,r,o){r.render("index.art",{a:1})}),router.post("/",function(e,r,o){console.log("//////")}),module.exports=router;

@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const{VIGModuleManager:VIGModuleManager}=require("core/vigmodule"),express=require("express");class AppManager extends VIGModuleManager{constructor(e){super(e),this.moduleType="app",this.storageName="apps",this.urlprefix="apps"}get apps(){return this.modules}getApp(e){return this.getModuleByName(e)}getModuleClass(e){return require(`apps/${e.name}/app`)}}module.exports=AppManager;

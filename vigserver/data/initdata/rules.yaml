@@ -1,0 +1,95 @@
+records:
+  # 规则名称
+  - name: 呼叫事件
+    # 规则触发的信令类型"alarm","event","status","message","register","attrs","data","notify","action","heartbeat","query"
+    on: event
+    # 规则的作用域,作用于呼叫器
+    scope: '@caller'
+    # 规则是否有效
+    enabled: true
+    # 指定该规则生效的时间段
+    timeslot:
+    # 优先级
+    priority: 0
+    # 规则操作
+    operate: if
+    # 执行表达式
+    condition: Event.code==4000
+    # 当表达式执行结果为true要执行的语句
+    # #<device sn>,或username,该用户属性绑定设备序列号
+    true: Answer(200);Notice('@watches',4,Device.name);
+    false:
+  # 规则名称
+  - name: 呼叫事务处理
+    description: 当收到呼叫器事务结束事件时,通知手表事务已结束
+    # 规则触发的信令类型"alarm","event","status","message","register","attrs","data","notify","action","heartbeat","query"
+    on: event
+    # 规则的作用域,作用于呼叫器
+    scope: '@caller'
+    # 规则是否有效
+    enabled: true
+    # 指定该规则生效的时间段
+    timeslot:
+    # 优先级
+    priority: 0
+    # 规则操作
+    operate: if
+    # 当设备事务
+    condition: Event.code==1004 && Event.progress==50
+    true: Notice('@watches',8,Device.name)
+    false:
+  # 规则名称
+  - name: 呼叫事务结束
+    description: 当收到呼叫器事务结束事件时,通知手表事务已结束
+    # 规则触发的信令类型"alarm","event","status","message","register","attrs","data","notify","action","heartbeat","query"
+    on: event
+    # 规则的作用域,作用于呼叫器
+    scope: '@caller'
+    # 规则是否有效
+    enabled: true
+    # 指定该规则生效的时间段
+    timeslot:
+    # 优先级
+    priority: 0
+    # 规则操作
+    operate: if
+    # 当设备事务
+    condition: Event.code==1004 && Event.progress==100
+    true: Answer(200);Notice('@watches',8,Device.name)
+    false:
+  - name: 注册
+    description: 当设备上线后触发1000事件，网关对其进行校时
+    on: event
+    # 规则的作用域,作用于呼叫器
+    scope: '@watches'
+    # 规则是否有效
+    enabled: true
+    # 指定该规则生效的时间段
+    timeslot:
+    # 优先级
+    priority: 0
+    # 规则操作
+    operate: if
+    # 当设备事务
+    condition: Event.code==1000
+    #配置时间
+    true: SetAttrs(Device,"datetime",Now());
+    false:
+  - name: 同步时间
+    description: 当设备触发1005事件，网关对其进行校时
+    on: event
+    # 规则的作用域,作用于呼叫器
+    scope: '@watches'
+    # 规则是否有效
+    enabled: true
+    # 指定该规则生效的时间段
+    timeslot:
+    # 优先级
+    priority: 0
+    # 规则操作
+    operate: if
+    # 当设备事务,datetime的属性编号是11
+    condition: Event.code==1005 && Event.attrs==="11"
+    #配置时间
+    true: SetAttrs(Device,"datetime",Now());
+    false:

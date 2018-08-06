@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+function ELFHash(e){let t=Buffer.from(e),r=0,n=0;for(let e=0;e<t.byteLength;++e){(n=4026531840&(r=(r<<4)+t[e]))&&(r^=n>>>24,r^=n)}return r}function BKDRHash(e){let t=0;e+="x";let r=parseInt(65745979961613.07);for(let n=0;n<e.length;n++)t>r&&(t=parseInt(t/137)),t=131*t+e.charCodeAt(n);return t}module.exports={ELFHash:ELFHash,BKDRHash:BKDRHash};

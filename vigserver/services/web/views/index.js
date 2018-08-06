@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const{WebViewBase:WebViewBase}=require("../webview");class IndexView extends WebViewBase{constructor(){super()}async get(e,s,t){return{template:"index.html",context:{name:"福建环宇通信息科技有限公司"}}}async post(e,s,t){console.log("//////")}}module.exports=IndexView;

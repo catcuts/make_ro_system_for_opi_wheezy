@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const HostSubject={name:"HOST",events:{Connected:1,Registered:2,Disconnected:3,Error:9},message:function(e,t){return{event:e,timestamp:(new Date).getTime(),message:t||""}}};module.exports={HostSubject:HostSubject};

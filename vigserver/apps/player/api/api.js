@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const{ApiResourceBase:ApiResourceBase,SuccessApiResponse:SuccessApiResponse}=require("services/web/api/apiresource");class PlayerConsole extends ApiResourceBase{settings(){this.name="console"}get(e,s,o){return SuccessApiResponse("this is plyar console")}post(e,s,o){}}module.exports=[PlayerConsole];

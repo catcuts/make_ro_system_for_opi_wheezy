@@ -1,0 +1,1 @@
+{"version":3,"sources":["0"],"names":["process","env","NODE_PATH","__dirname","require","Module","_initPaths","vigserver","start"],"mappings":";AAEAA,QAAQC,IAAIC,UAAUC,UACtBC,QAAQ,UAAUC,OAAOC,aACzB,MAAMC,UAAWH,QAAQ,YACzBG,UAAUC"}

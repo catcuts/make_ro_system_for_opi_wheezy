@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+module.exports={InitialError:[1e3,1,"设备自检或初始时发生异常",{}],Screen:[1001,1,"屏幕异常",{}],LowBattary:[1002,2,"低电警告",{quantity:0}],Error:[1003,1,"2G/3G/4G模块异常",{}],LowStorage:[1004,3,"存储空间不足",{totalSize:0,freeSize:0}],UpgradeFail:[1005,3,"固件升级失败",{from:"",to:"",firewall:{}}],LogFull:[1006,2,"日志空间满或不能正常工作",{}],LogConnect:[1007,3,"无法连接到日志服务器",{server:"",message:""}],DebugOn:[1008,1,"远程DEBUG开启",{}],LowMemory:[1009,3,"内存不足",{}],HighCPU:[1010,3,"CPU负载高",{}],RegisterFail:[1011,2,"子设备注册失败",{}]};

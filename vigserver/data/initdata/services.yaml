@@ -1,0 +1,70 @@
+records:
+  - name: schedule
+    enabled: true
+    title: 计划日程安排
+    entry: services/schedule/service
+  - name: web
+    enabled: true
+    title: Voerka WebService
+    entry: services/web/service
+    #开放的端口
+    port: 8000
+    # 默认安全密钥
+    secret:  5cc91a885be749f99f17052112e8b31d
+    issuer: http://www.huanyutong.com
+    audience: MEEYI
+    cookieName: MEEYI_VOERKA
+    debug: true
+  - name: serialport
+    title: SerialPort Service
+    enabled: true
+    entry: services/serialport/service
+    ports:
+      - name: wirelesscalling
+        port: /dev/ttyACM0
+        driver: vssp
+        title: 无线数据
+        enabled: true
+  - name: vmc
+    title: Voerka Message Client Service
+    entry: services/vmc/service
+    enabled: true
+    session:
+      sessionMaxId: 65535
+      sessionName: sid
+    transfers:
+      - name: mqtt
+        type: mqtt
+        enabled: true
+        heartbeat: 6
+        register: true
+        broker: mqtt://127.0.0.1
+        username:
+        password:
+        qos: 0
+        retain: false
+        dup: false
+  - name: echo
+    enabled: true
+    title: 应答服务
+  - name: discover
+    title: 设备发现
+    enabled: true
+    entry: services/discover/service
+    cloud:
+      url: mqtt://mqtt.huanyutong.com
+      username: vigateway
+      password: '@@!*@^^^'
+  - name: callingcontrolcenter
+    title: 无线呼叫控制模块
+    enabled: true
+    entry: apps/calling/services/control
+  - name: ruleengine
+    title: Engine of call rule
+    enabled: true
+    entry: services/ruleengine/service
+  - name: monitor
+    title: 设备守护服务
+    description: 与设备守护进程通讯，提供GPIO访问/固件升级/应用监视等服务
+    enabled: true
+    entry: services/monitor/service

@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const fs=require("fs");function getSequenceNumber(e="default"){let r=path.join(VIGConsts.DataRootFolder,"data","sequences",e+".txt");try{if(!fs.existsSync(r))return fs.writeFileSync(r,"1"),t;let t=parseInt(fs.readFileSync(r));try{t++}catch(r){logger.warn(_("Sequence {name} is overflow.").params(e)),t=1}fs.writeFileSync(r,String(t))}catch(r){logger.error(_("Error while sequence {name} generate :{error}").params(e,r.stack))}return 1}module.exports=getSequenceNumber;

@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const eventbus=require("../eventbus/eventbus"),Message=require("../eventbus/channel"),deviceStatusCache=require("../cache").caches.devicestatus;class DeviceStatusManager{constructor(){eventbus.on("DeviceStatus",this.onStatusChange)}onStatusChange(e,t,s){deviceStatusCache.set(e+"."+t,s)}getStatus(e,t){return deviceStatusCache.get(e+"."+t)}subscribe(){}start(){}}module.exports=DeviceStatusManager;

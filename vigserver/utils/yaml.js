@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const YAWN=require("yawn-yaml/cjs"),fs=require("fs"),{updateJson:updateJson}=require("./jsonfuncs");function readYamlFile(e,n={}){if(fs.existsSync(e))try{return new YAWN(fs.readFileSync(e,{encoding:"utf8"})).json}catch(n){logger.warn(_("Error while load settings file {file}: {err}").params(e,n.stack))}return n}function updateYamlFile(e,n,a){let r=new YAWN(fs.readFileSync(e,{encoding:"utf8"}));r.json=updateJson(r.json,n,a),fs.writeFileSync(e,r.yaml)}module.exports={readYamlFile:readYamlFile,updateYamlFile:updateYamlFile};

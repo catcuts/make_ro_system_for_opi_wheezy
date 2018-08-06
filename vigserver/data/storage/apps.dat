@@ -1,0 +1,3 @@
+{"name":"calling","title":"Wireless Calling system","enabled":true,"_id":"Xh3tjJluy8V5sj6p"}
+{"name":"player","title":"Multimedia Message Player","enabled":true,"author":"环宇通","version":1,"api":true,"static":true,"web":true,"subscribe":null,"_id":"v5oDXM38bxHvm7wF"}
+{"$$indexCreated":{"fieldName":"name","unique":true,"sparse":false}}

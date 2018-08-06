@@ -1,0 +1,5 @@
+{"name":"呼叫事务结束","description":"当收到呼叫器事务结束事件时,通知手表事务已结束","on":"event","scope":"@caller","enabled":true,"timeslot":null,"priority":0,"operate":"if","condition":"Event.code==1004 && Event.progress==100","true":"Answer(200);Notice('@watches',8,Device.name)","false":null,"_id":"V1UPk6XLl9zBOzx3"}
+{"name":"呼叫事件","on":"event","scope":"@caller","enabled":true,"timeslot":null,"priority":0,"operate":"if","condition":"Event.code==4000","true":"Answer(200);Notice('@watches',4,Device.name);","false":null,"_id":"W3pKmrwB2LzgakBM"}
+{"name":"呼叫事务处理","description":"当收到呼叫器事务结束事件时,通知手表事务已结束","on":"event","scope":"@caller","enabled":true,"timeslot":null,"priority":0,"operate":"if","condition":"Event.code==1004 && Event.progress==50","true":"Notice('@watches',8,Device.name)","false":null,"_id":"glQcTLaBNymBZhms"}
+{"name":"注册","description":"当设备上线后触发1000事件，网关对其进行校时","on":"event","scope":"@watches","enabled":true,"timeslot":null,"priority":0,"operate":"if","condition":"Event.code==1000","true":"SetAttrs(\"datetime\",Now());","false":null,"_id":"wwgvPJWgBggLwUTq"}
+{"$$indexCreated":{"fieldName":"name","unique":true,"sparse":false}}

@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+function isNumber(s){return""!==s&&null!=s&&!isNaN(s)}function isJson(s){return null!=s&&"object"==typeof s&&!1===Array.isArray(s)}function isEmptyJson(s={}){for(let n in s)return!1;return!0}function isClass(s){return"function"==typeof s&&String(s).startsWith("class")}module.exports={isNumber:isNumber,isJson:isJson,isEmptyJson:isEmptyJson,isClass:isClass};

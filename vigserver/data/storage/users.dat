@@ -1,0 +1,3 @@
+{"name":"admin","password":"Bz3QsEMQ97fs4Onp7pfpWPs7YLE=","fullname":"Administrator","email":null,"enabled":true,"super":true,"integral":0,"_id":"7LmVhYwvJUZAJd2D"}
+{"name":"zwx","password":"Bz3QsEMQ97fs4Onp7pfpWPs7YLE=","fullname":"ZhangWeiXiong","email":null,"enabled":true,"super":"falset","mphone":null,"group":"waiter","integral":0,"_id":"Xh5VHSNZml2VPm3Q"}
+{"$$indexCreated":{"fieldName":"name","unique":true,"sparse":false}}

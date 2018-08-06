@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+async function registerDeviceType(e){let t=await VIGStorage.openDocument("devicetypes");await t.insert(e)}async function unRegisterDeviceType(e){let t=await VIGStorage.openDocument("devicetypes");await t.remove({name:e},{multi:!0})}module.exports={registerDeviceType:registerDeviceType,unRegisterDeviceType:unRegisterDeviceType};

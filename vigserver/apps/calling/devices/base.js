@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const DeviceTypeBase=require("core/device/devicetype").DeviceTypeBase;class WirelessDeviceType extends DeviceTypeBase{get inPort(){return void 0===this._inport&&(this._inport=VIGServices.getServices("callingcontrolcenter")),this._inport}onAfterAttrsUpdate(e,i){}}module.exports=WirelessDeviceType;

@@ -1,0 +1,57 @@
+#串口
+serialport:
+  - num: 0
+    enabled: true
+
+#蓝牙
+bluetooth:
+  # 蓝牙版本
+  version:
+  enabled: true
+
+#CPU信息
+cpu:
+  #架构
+  arch: arm7
+  #位数
+  bits: 64
+  #主频
+  frequency:
+
+#屏幕
+screen:
+  #分辨率
+  width: 100
+  height: 100
+  #是否支持触摸
+  touch: true
+  #是否支持彩色0-黑白,>0代表采彩色数量
+  color:
+  enabled: true
+
+# 摄像头,支持多个摄像头
+cameras:
+  - num: 0
+    # 代表摄像头类型,如CMOS,CCD等
+    type:
+    #像素,100代表100万
+    pixels: 100
+    #摄像头方向，取值，front前置摄像头，back后置摄像头
+    direction: front
+    #是否启用
+    enabled: true
+
+os:
+  name: Linux
+  arch: 64Bit
+
+#网络接口参数　
+network:
+  #默认的有线网络接口
+  defaultWired: eth0
+  #默认的无线WiFi网络接口
+  defaultWifi:
+  #设备的网络接口
+  interfaces:
+    eth0:
+

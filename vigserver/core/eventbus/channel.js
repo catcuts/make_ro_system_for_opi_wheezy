@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const eventbus=require("./eventbus");class MessageChannel{constructor(e){this.namespace=e,this._channel_namespace=e+".channel"}send(e){eventbus.emit(this._channel_namespace,e)}broadcast(e){eventbus.emit(this.namespace,e)}listen(e){eventbus.on(this._channel_namespace,e)}subscribe(e){eventbus.on(this.namespace,s=>{e&&e(s.payload)})}}module.exports=MessageChannel;

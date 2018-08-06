@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+function isClass(t){if("function"==typeof t&&t.prototype)try{return t.arguments&&t.caller,!1}catch(t){return!0}return!1}module.exports={isClass:isClass};

@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const os=require("os");module.exports={cronTime:"1 30 * * * *",onTick:function(){logger.info(_("Start monitoring the system environment"));let e=os.freemem()/os.totalmem();logger.debug("Free memory:"+e.toFixed(2)+"%")}};

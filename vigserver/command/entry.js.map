@@ -1,0 +1,1 @@
+{"version":3,"sources":["0"],"names":["shellCommands","module","exports","vorpal","cmd","require","e","console","log","message"],"mappings":";AAOA,MAAMA,eACF,UACA,OACA,MACA,OACA,UACA,WAGJC,OAAOC,QAAQ,CAACC,IACZ,IAAI,IAAIC,KAAOJ,cACX,IACIK,QAAQ,KAAKD,EAAbC,CAAkBF,GACrB,MAAOG,GACJC,QAAQC,IAAI,iBAAiBJ,EAAI,YAAYE,EAAEG"}

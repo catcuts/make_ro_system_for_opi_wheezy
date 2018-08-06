@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const DeviceProxyBase=require("core/device/deviceproxy").DeviceProxyBase,WirelessDeviceType=require("./base");class CallerProxy extends DeviceProxyBase{}class Caller extends WirelessDeviceType{static getProxyCLass(){return CallerProxy}}module.exports=Caller;

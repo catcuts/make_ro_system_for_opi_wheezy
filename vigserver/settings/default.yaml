@@ -1,0 +1,16 @@
+#全局配置参数
+# 指定当前硬件平台名称
+platform: OrangePi
+# 指定当前网关的宿主设备的SN
+host:
+# 日志配置
+logger:
+  level: DEBUG
+  # 日志输出目标设置，如果要输出到logServer需加入server
+  output: console,file
+  # 日志文件最大尺寸
+  fileSize:
+  # 日志文件备份数量，默认3
+  fileCount: 3
+  # 日志服务器地址,默认使用UDP协议,如udp://192.168.1.1，当output包含server时生效
+  server:

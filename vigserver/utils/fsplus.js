@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const fs=require("fs"),util=require("util");async function fileExists(i){return await util.promisify(fs.access)(i,fs.constants.F_OK)}async function readFileAsText(i){return await util.promisify(fs.readFile)(i,{encoding:"utf8"})}module.exports={fileExists:fileExists,readFileAsText:readFileAsText};

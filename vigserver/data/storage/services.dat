@@ -1,0 +1,11 @@
+{"name":"monitor","title":"设备守护服务","description":"与设备守护进程通讯，提供GPIO访问/固件升级/应用监视等服务","enabled":true,"entry":"services/monitor/service","_id":"75Pt5BQjZZjFqfJR"}
+{"name":"restful","title":"RESTful API","enabled":true,"entry":"services/restful/service","requireAuth":false,"expiresIn":null,"_id":"B4Yr54BCC02a0S1h"}
+{"name":"echo","enabled":true,"title":"应答服务","_id":"BwLBy5Ys75PrOouD"}
+{"name":"httpserver","enabled":"true,","title":"HTTP Server","entry":"services/httpserver/service","_id":"O3HCQT3zDyOPaKEZ"}
+{"name":"callingcontrolcenter","title":"无线呼叫控制模块","enabled":true,"entry":"apps/calling/services/control","_id":"ZBBxStQVjeHCzcgo"}
+{"name":"ruleengine","title":"Engine of call rule","enabled":true,"entry":"services/ruleengine/service","_id":"dVKnZJLJy77t9oZ9"}
+{"name":"serialport","title":"SerialPort Service","enabled":true,"entry":"services/serialport/service","ports":[{"name":"wirelesscalling","port":"/dev/ttyACM0","driver":"vssp","title":"无线数据","enabled":true}],"port":null,"_id":"hy3sq9gqANZZBvly"}
+{"name":"vmc","title":"Voerka Message Client Service","entry":"services/vmc/service","enabled":true,"session":{"sessionMaxId":65535,"sessionName":"sid"},"transfers":[{"name":"mqtt","type":"mqtt","enabled":true,"heartbeat":6,"register":true,"broker":"mqtt://192.168.118.129","username":"huanyutong","password":"meeyi##**@@","qos":0,"retain":false,"dup":false}],"_id":"jEcBNOoAZz0SGlKc"}
+{"name":"schedule","enabled":true,"title":"计划日程安排","entry":"services/schedule/service","_id":"tulKMRb4fmTZHypG"}
+{"name":"discover","title":"设备发现","enabled":true,"entry":"services/discover/service","cloud":{"url":"mqtt://mqtt.huanyutong.com","username":"vigateway","password":"@@!*@^^^"},"_id":"wiKA8nf7TqdHRz04"}
+{"$$indexCreated":{"fieldName":"name","unique":true,"sparse":false}}

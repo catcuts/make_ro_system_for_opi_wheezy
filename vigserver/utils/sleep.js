@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+async function sleep(e){let t=(new Date).getTime();return new Promise((n,s)=>{let i=()=>{(new Date).getTime()-t>e?n():setTimeout(i,100)};setTimeout(i,10)})}module.exports=sleep;

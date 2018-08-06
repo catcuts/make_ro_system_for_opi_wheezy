@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+require("source-map-support/register");const Serialport=require("serialport"),port=new Serialport("/dev/ttyACM0",{baudRate:115200,autoOpen:!1});port.on("error",function(e){console.log("Error: ",e.message)}),port.on("data",function(e){console.log("Receive: ",e.toString("hex"))}),port.open(function(e){if(e)return console.log("Error opening port: ",e.message);let o=Buffer.from([255,0,255,0,255,0,255,0,0,1,0,0]);setInterval(()=>{console.log("Send: ",o.toString("hex")),port.write(o)},3e3)});

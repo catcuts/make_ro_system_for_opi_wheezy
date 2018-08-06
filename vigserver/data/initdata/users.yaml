@@ -1,0 +1,21 @@
+records:
+  - name: admin
+    password: Bz3QsEMQ97fs4Onp7pfpWPs7YLE=
+    fullname: Administrator
+    email:
+    enabled: true
+    super: true
+    # 积分
+    integral: 0
+  - name: zwx
+    password: Bz3QsEMQ97fs4Onp7pfpWPs7YLE=
+    fullname: ZhangWeiXiong
+    email:
+    enabled: true
+    super: falset
+    # 手机号码
+    mphone:
+    # 用户所属的组名称
+    group: waiter
+    # 积分
+    integral: 0

@@ -1,0 +1,1 @@
+{"version":3,"sources":["0"],"names":["getCurrentVersion","require","module","exports","vorpal","command","option","action","async","args","callback","options","set","this","log"],"mappings":";AAMA,MAAMA,kBAAEA,mBAAoBC,QAAQ,oBAGpCC,OAAOC,QAAQ,SAASC,GACpBA,EACKC,QAAQ,UAAW,uBACnBC,OAAO,sBAAuB,sCAC9BC,OAAOC,eAAeC,EAAMC,GACdD,EAAKE,QAAQC,IAIxBC,KAAKC,IAAI,yBAAyBd"}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API List</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <td>名称</td>
+            <td>描述</td>
+            <td>访问入口</td>
+        </tr>
+    </thead>
+    {{each apis}}
+        <tr>
+            <td>{{ $value.name }}</td>
+            <td>{{ $value.description}}</td>
+            <td>/{{ $value.url }}</td>
+        </tr>
+    {{/each}}
+    <tbody>
+
+    </tbody>
+</table>
+
+</body>
+</html>

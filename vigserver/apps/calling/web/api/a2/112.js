@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const{ApiResourceBase:ApiResourceBase,SuccessApiResponse:SuccessApiResponse}=require("services/web/api/apiresource");class WatchesResource extends ApiResourceBase{settings(){this.name="Watches"}list(e,s,c){return SuccessApiResponse("CallWatches parentId="+e.parentResource.id+" parentName="+e.parentResource.topic)}one(e,s,c){return SuccessApiResponse("CallWatches one="+e.params.id)}}module.exports=WatchesResource;

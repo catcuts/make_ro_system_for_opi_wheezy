@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const ServiceBase=require("core/service/servicebase"),HTTPServer=require("./httpserver"),WebFramework=require("./webframework");class WebService extends ServiceBase{async start(){this.web=new WebFramework(this.attrs),this.httpserver=new HTTPServer(this.web.express,this.attrs),await this.httpserver.start()}async stop(){await this.httpserver.close()}}module.exports=WebService;

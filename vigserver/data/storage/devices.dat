@@ -1,0 +1,8 @@
+{"version":"1","name":"","wireless":2,"type":"caller","model":"8201","sn":"8e7b9e1d","parent":"","authorized":false,"registerDate":{"$$date":1531270068830},"_id":"2yRJlu93tcMGoL5q"}
+{"name":"Voerka IoT Wireless Gateway","sn":"29f29b5e153d","__host__":true,"title":"物联网无线网关","language":null,"domain":1,"debug":true,"remain":true,"enabled":true,"owner":null,"customer":null,"dept":null,"description":null,"version":"3.2.0","mode":0,"behavior":0,"roaming":0,"roamingGroup":0,"roamingDomain":null,"type":"VIGateway","timeZone":"Asia/Shanghai","model":"VIG9002","secret":"5cd29c05899347deb711a45f875f65ba","port":80,"location":{"longitude":null,"latitude":null,"altitude":null},"group":null,"transaction":{"timeout":60,"maxLength":0,"dataKeepTime":0},"ap":{"enabled":false,"name":"MeeYiAP","password":null},"dhcp":{"enabled":false,"range":null},"caches":[{"name":"devicestatus","title":null,"description":"Managing device state caching","enabled":true}],"logger":{"level":"DEBUG","output":"console,file","fileSize":null,"fileCount":3,"server":null},"eventbus":{"pulse":2000},"_id":"Cwwk34egembzbwek"}
+{"name":"faker","type":"faker","title":"测试设备","sn":"88888888","remain":false,"debug":true,"enabled":true,"_id":"GrPy9GPxnmXkITtB"}
+{"sn":"43217016","authorized":false,"_id":"JCeHJEXeYs2fypFp"}
+{"sn":"7d859e1a","authorized":true,"_id":"NJzPFs71v70rCK87"}
+{"sn":"3e8aa916","authorized":false,"_id":"NjH4N6CRU4XrDERr"}
+{"version":"version","name":"8802","wireless":2,"type":"watches","model":"model","sn":"43218416","parent":"","authorized":false,"registerDate":{"$$date":1531271495526},"_id":"exW3yfBj06hMYDOy"}
+{"$$indexCreated":{"fieldName":"sn","unique":true,"sparse":false}}

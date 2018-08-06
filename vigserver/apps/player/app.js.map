@@ -1,0 +1,1 @@
+{"version":3,"sources":["0"],"names":["AppBase","require","api","App","[object Object]","this","registerApi","registerView","registerSchedule","console","log","name","module","exports"],"mappings":";AAKA,MAAMA,QAAUC,QAAQ,oBAClBC,IAAID,QAAQ,mBAEZE,YAAYH,QACdI,OAEIC,KAAKC,YAAYJ,KAEjBG,KAAKE,aAAa,IAAIN,QAAQ,kBAE9BI,KAAKG,mBAGTJ,cACIK,QAAQC,YAAYL,KAAKM,oBAKjCC,OAAOC,QAAQV"}

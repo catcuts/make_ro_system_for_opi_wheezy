@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const{VIGModule:VIGModule}=require("core/vigmodule");class ServiceBase extends VIGModule{constructor(e,s){super(s,{storageName:"services",moduleType:"service"})}publishSubjectMessage(e,s={}){let r="service.{name}.{subject}".params(this.name.toLowerCase(),e);try{this.node.publish(r,s)}catch(e){logger.warn(_("Error while publish subject<{name}> message:{err}").params(r,e.stack))}}}module.exports=ServiceBase;

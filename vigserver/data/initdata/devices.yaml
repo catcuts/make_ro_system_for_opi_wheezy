@@ -1,0 +1,67 @@
+records:
+  - name: faker
+    type: faker
+    title: 测试设备
+    sn: !!str 88888888
+    remain: false
+    debug: true
+    enabled: true
+
+
+
+
+  - name: Voerka IoT Wireless Gateway
+    sn: __host__
+    __host__: true
+    title: 物联网无线网关
+    language: null
+    domain: 0
+    debug: false
+    remain: true
+    enabled: true
+    owner: null
+    customer: null
+    dept: null
+    description: null
+    version: 1.0.27
+    mode: 0
+    behavior: 0
+    roaming: 0
+    roamingGroup: 0
+    roamingDomain: null
+    type: VIGateway
+    timeZone: Asia/Shanghai
+    model: VIG9002
+    secret: 5cd29c05899347deb711a45f875f65ba
+    port: 80
+    location:
+      label: null
+      longitude: null
+      latitude: null
+      altitude: null
+    group: null
+    transaction:
+      timeout: 60
+      maxLength: 0
+      dataKeepTime: 0
+    ap:
+      enabled: false
+      name: MeeYiAP
+      password: null
+    dhcp:
+      enabled: false
+      range: null
+    caches:
+      - name: devicestatus
+        title: null
+        description: Managing device state caching
+        enabled: true
+    logger:
+      level: DEBUG
+      output: 'console,file'
+      fileSize: null
+      fileCount: 3
+      server: null
+    eventbus:
+      pulse: 2000
+

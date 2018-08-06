@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const ServiceBase=require("core/service/servicebase");class EchoService extends ServiceBase{ready(){this.n=1}onMessage(e){}onNotify(e){}async _testecho(){return this.n+=1,await this.n}async start(){}}module.exports=EchoService;

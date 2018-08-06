@@ -1,0 +1,1 @@
+{"version":3,"sources":["0"],"names":["ResourceManager","[object Object]","respath","this","root","resName","fs","existsSync","path","join","resname","resdata","moudles","exports"],"mappings":";MAWMA,gBACFC,YAAYC,GAERC,KAAKC,KAAOF,EAEhBD,IAAII,GACA,OAAGC,GAAGC,WAAWF,GACNA,EAEAG,KAAKC,KAAKN,KAAKC,KAAMM,SAGpCT,IAAIU,KAKRC,QAAQC,QAAQb"}

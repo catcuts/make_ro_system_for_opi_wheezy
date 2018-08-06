@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const shellCommands=["release","mode","get","ping","version","restart"];module.exports=(e=>{for(let o of shellCommands)try{require("./"+o)(e)}catch(e){console.log("Load command <"+o+"> fail : "+e.message)}});

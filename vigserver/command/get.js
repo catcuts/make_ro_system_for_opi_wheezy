@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const hprose=require("hprose"),monitorUrl="http://127.0.0.1:7001";module.exports=function(e){e.command("get <module> [name]","show current host module information,value of module:gateway,service,app,services,apps,device,devicetype").autocomplete(["gateway","service","app","services","apps","device","devicetype"]).action(async function(e,t){let o=new hprose.HttpClient(monitorUrl,["get"]);try{let t=await o.get(e.module,e.name);this.log(t)}catch(e){this.log("VIGServer may not be running,cannot read mode:"+e.message)}})};

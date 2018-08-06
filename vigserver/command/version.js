@@ -1,0 +1,2 @@
+/*　China Fujian Huanyutong Technology Co., Ltd. */
+const{getCurrentVersion:getCurrentVersion}=require("../utils/version");module.exports=function(n){n.command("version","version information").option("-s, --set <version>","Specify the current version number").action(async function(n,e){n.options.set;this.log("Current version:"+await getCurrentVersion())})};

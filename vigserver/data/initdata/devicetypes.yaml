@@ -1,0 +1,207 @@
+records:
+  - name: vigateway
+    title: Voerka IoT Wireless Gateway
+    model: VIG9002
+    behavior: 0
+    entry: devices/vigateway/vigateway
+    enabled: true
+    advanced:
+      # 设备的连接行为 0 - 设备会休眠，仅仅在必要时向网关发送数据  1 - 设备需要由网关进行唤醒  2 - 始终在线，可以随时进行通讯
+      connectBehavior: 2
+      # 指定当接收到设备消息时的处理行为，0-由设备类型类自己处理，1-优先转发至云端服务器处理,2-由规则引擎优先处理
+      msgHandleBehavior: 0
+    #　列出此设备类型支持的所有属性
+    # 设备类型属性元数据　
+    meta:
+      attrs:
+        name:
+        title:
+        mode:
+          readOnly: true
+        model:
+        behavior:
+        owner:
+        dept:
+        customer:
+        enabled:
+        debug:
+        sn:
+        datetime:
+          valuetype: string
+          readOnly: true
+          storage: '@TimeDeviceAttr'
+        parent:
+        token:
+        icon:
+        language:
+        charset:
+        domain:
+        keepalive:
+        timeZone:
+          valuetype: string
+          storage: '@TimeDeviceAttr'
+        description:
+        group:
+        broadcast:
+        rules:
+          valuetype: map-array
+          storage: rules
+        mqtt:
+          valuetype: map
+          select: {"name":"vmc"}
+          where: '$.transfers[?(@.name=='mqtt')]'
+          storage: services
+        logger:
+          enabled:
+          output:
+          fileSize:
+          fileCount:
+          server:
+        location:
+          valuetype: map
+          members: ["label","longitude","latitude","altitude"]
+        network:
+          # 0-不同步,1-软同步,2-硬同步
+          sync: 2
+          valuetype: map
+          storage: '@NetworkDeviceAttr'
+  - name: faker
+    title: 用于测试目的设备类型
+    model:
+    behavior: 0
+    entry: devices/faker/faker
+    enabled: true
+
+  - name: caller
+    title: Caller
+    entry: apps/calling/devices/caller
+    enabled: true
+    # 指定当接收到设备消息时的处理行为，0-由设备类型类自己处理，1-优先转发至云端服务器处理,2-由规则引擎优先处理
+    behavior: 0
+    # 声明该设备类型依赖的服务
+    services: serialport
+    #高级参数
+    advanced:
+      # 保留属性 当获取设备的详细属性时，不包括的属性名称
+      reservedAttrs: []
+      # 设备的连接行为 0 - 设备会休眠，仅仅在必要时向网关发送数据  1 - 设备需要由网关进行唤醒  2 - 始终在线，可以随时进行通讯
+      connectBehavior: 2
+      # 指定当接收到设备消息时的处理行为，0-由设备类型类自己处理，1-优先转发至云端服务器处理,2-由规则引擎优先处理
+      msgHandleBehavior: 0
+      #消息节流控制
+      eventThrottle:
+        enabled: false
+        # 对指定事件编码进行限制，如["*"]代表对所有类型的事件进行控制，[4000]代表按键事件进行控制
+        excludes: []
+        # 时间间隔,以秒为单位，0-代表不进行控制
+        interval: 0
+      #消息事务配置
+      transaction:
+        # 指定哪种事件自动生成事务
+        events: [4000]
+    # 设备类型属性元数据　
+    meta:
+      attrs:
+        name:
+        model:
+        mode:
+        sn:
+        regRetryCount:
+        version:
+
+
+  - name: callkeyboard
+    title: CallingKeyboard
+    entry: apps/calling/devices/callkeyboard
+    enabled: true
+    # 指定当接收到设备消息时的处理行为，0-由设备类型类自己处理，1-优先转发至云端服务器处理,2-由规则引擎优先处理
+    behavior: 0
+    # 声明该设备类型依赖的服务
+    services: serialport
+    #高级参数
+    advanced:
+      # 低电警告的阀值,按百分比
+      lowBattary: 20
+      # 设备的连接行为 0 - 设备会休眠，仅仅在必要时向网关发送数据  1 - 设备需要由网关进行唤醒  2 - 始终在线，可以随时进行通讯
+      connectBehavior: 2
+      # 指定当接收到设备消息时的处理行为，0-由设备类型类自己处理，1-优先转发至云端服务器处理,2-由规则引擎优先处理
+      msgHandleBehavior: 0
+      #消息节流控制
+      eventThrottle:
+        enabled: false
+        # 对指定事件编码进行限制，如["*"]代表对所有类型的事件进行控制，[4000]代表按键事件进行控制
+        excludes: []
+        # 时间间隔,以秒为单位，0-代表不进行控制
+        interval: 0
+      #消息事务配置
+      transaction:
+        # 指定哪种事件自动生成事务
+        events: [4000]
+  - name: watches
+    title: Watches
+    entry: apps/calling/devices/watches
+    enabled: true
+
+    # 声明该设备类型依赖的服务
+    services: serialport
+    #高级参数
+    advanced:
+      # 设备的连接行为 0 - 设备会休眠，仅仅在必要时向网关发送数据  1 - 设备需要由网关进行唤醒  2 - 始终在线，可以随时进行通讯
+      connectBehavior: 2
+      # 指定当接收到设备消息时的处理行为，0-由设备类型类自己处理，1-优先转发至云端服务器处理,2-由规则引擎优先处理
+      msgHandleBehavior: 0
+      #消息节流控制
+      eventThrottle:
+        enabled: false
+        # 对指定事件编码进行限制，如["*"]代表对所有类型的事件进行控制，[4000]代表按键事件进行控制
+        excludes: []
+        # 时间间隔,以秒为单位，0-代表不进行控制
+        interval: 0
+      #消息事务配置
+      transaction:
+        # 指定哪种事件自动生成事务
+        events: [4000]
+      #日期时间格式
+      dateTimeFormat: YYYYMMDDHHmmss
+
+    # 设备类型属性元数据　
+    meta:
+      attrs:
+        name:
+          sync: 1
+          maxLength: 16
+        type:
+          readOnly: true
+        parent:
+          readOnly: true
+        authorized:
+          readOnly: true
+        roaming:
+          readOnly: true
+        language:
+          sync: 1
+        dept:
+          sync: 1
+          maxLength: 16
+        owner:
+          sync: 1
+          maxLength: 16
+        customer:
+          sync: 1
+          maxLength: 16
+        model:
+          maxLength: 16
+          readOnly: true
+        mode:
+          readOnly: true
+          valuetype: byte
+        sn:
+          maxLength: 8
+          readOnly: true
+        version:
+          readOnly: true
+        datetime:
+          # 0-不同步 1-软同步 2-硬同步
+          sync: 2
+        signal:
+          readOnly: true
